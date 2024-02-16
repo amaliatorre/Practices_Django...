@@ -17,7 +17,6 @@ titulo (CharField)
 descripcion (TextField)
 fecha_creacion (DateField)
 completada (BooleanField)
-Serializador (serializers.py):
 
 Serialize:
 Crea un serializador llamado TareaSerializer que utilice el modelo Tarea y serialice todos los campos.
