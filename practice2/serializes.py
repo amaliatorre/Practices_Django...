@@ -1,0 +1,1 @@
+# Serialize: Crea un serializador llamado TareaSerializer que utilice el modelo Tarea y serialice todos los campos. Vista de la API (views.py):
