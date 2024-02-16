@@ -1,10 +1,11 @@
 from Practices.models import Product
-from typing import List
 from django.shortcuts import render
 # views.py
 
 # la realidad es que el metodo no devuelve una lista sino una respuesta donde apunto a una vista html
 # a la cual le pasas la lista
+
+
 def up_to_50_euros(request):
 
     # traer de la bbdd todos los productor que cumplan esta condicion mayor igual...
