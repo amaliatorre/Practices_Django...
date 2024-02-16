@@ -1,15 +1,15 @@
 from Practices.models import Product
 from typing import List
 from django.shortcuts import render
-#views.py
-def up_to_50_euros(request) -> List[Product]:
+# views.py
 
-    # traer de la bbdd todos los productor que cumplan esta condicion...
-    # crear la lista para mandar
+# la realidad es que el metodo no devuelve una lista sino una respuesta donde apunto a una vista html
+# a la cual le pasas la lista
+def up_to_50_euros(request):
 
-    query_up_to_50_euros = Product.objects.filter(price__gte=50)
-    listo_of_products_up_to_50 = list(query_up_to_50_euros)
+    # traer de la bbdd todos los productor que cumplan esta condicion mayor igual...
+    # "crear la lista para mandar" - no hace falta ya que la respuesta de queryset ya te lo trae en forma de lista
 
-    return render(request, 'mi_app/template.html', {'listo_of_products_up_to_50': listo_of_products_up_to_50})
+    listo_of_products_up_to_50 = Product.objects.filter(price__gte=50)
 
-
+    return render(request, 'template.html', {'listo_of_products_up_to_50': listo_of_products_up_to_50})
