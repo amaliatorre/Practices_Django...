@@ -31,6 +31,7 @@ Crea un template que muestre la lista de tareas.
 
 
 Ejercicio 3 
+
 Desarrolla una aplicación web para la gestión de una biblioteca. La aplicación debe permitir a los usuarios ver la lista de libros disponibles, buscar libros por título o autor, y poder reservar o prestar libros.
 
 Modelos:
