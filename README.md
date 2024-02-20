@@ -45,6 +45,7 @@ Atributos: Nombre, Apellido, Email.
 Relación con Libro: Muchos a muchos (un usuario puede tener varios libros prestados, y un libro puede estar prestado a varios usuarios).
 
 Vistas:
+
   Página principal:
     Lista de todos los libros disponibles con enlaces a detalles.
   Página de detalles del libro:
@@ -55,11 +56,13 @@ Vistas:
     Resultados de búsqueda con enlaces a detalles.
     
 Templates:
+
 Template para la página principal que muestra la lista de libros.
 Template para la página de detalles del libro.
 Template para la página de búsqueda.
 
 Tests:
+
 Escribe tests para asegurar el funcionamiento correcto de las siguientes funcionalidades:
   
   Crear un libro y verificar que se muestra en la lista de libros.
@@ -68,6 +71,7 @@ Escribe tests para asegurar el funcionamiento correcto de las siguientes funcion
   Buscar libros por título y autor y verificar los resultados.
 
 URLs:
+
 Configura las URLs para ambas vistas (API y con templates).
 
 Requisitos extra:
