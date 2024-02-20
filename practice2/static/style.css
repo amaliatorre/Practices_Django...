@@ -1,0 +1,10 @@
+.error {
+    background-color: #da383d;
+    border: solid 1px #464749;
+}
+
+.alert {
+    background-color: #d5970c;
+    border: solid 1px #c4521b;
+}
+

@@ -6,9 +6,12 @@ from django.db import models
 # fecha_creacion (DateField)
 # completada (BooleanField)
 
+
 class Tarea(models.Model):
     titulo = models.CharField(max_length=50)
     descripcion = models.TextField(max_length=300)
     fecha_creacion = models.DateField(auto_now=True)
     completada = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ('fecha_creacion', )

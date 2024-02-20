@@ -1,0 +1,53 @@
+<!--path('lista_tareas/', lista_tareas, name='lista_tareas'),-->
+<!-- titulo descripcion fecha_creacion completada -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>lLista de Tareas</title>
+</head>
+<body>
+<h2> TASK LIST </h2>
+<br>
+<div>
+    {% if list_all_task %}
+        <table>
+            <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Fecha de Creación</th>
+                <th>Completada</th>
+                <th>Borrar</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for tarea in list_all_task %}
+                <tr>
+                    <td>{{ tarea.titulo }}</td>
+                    <td>{{ tarea.descripcion }}</td>
+                    <td>{{ tarea.fecha_creacion }}</td>
+                    <td>{{ tarea.completada }}</td>
+                    <td> <a href="{% url "practice2:delete" tarea_id=tarea.id %}">Borrar</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert">
+            <h5>No hay tareas disponibles.</h5>
+        </div>
+    {% endif %}
+
+</div>
+
+
+
+</body>
+</html>
